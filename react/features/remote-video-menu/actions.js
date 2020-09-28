@@ -12,7 +12,8 @@ import { hideDialog } from '../base/dialog';
 import { setAudioMuted } from '../base/media';
 import {
     getLocalParticipant,
-    muteRemoteParticipant
+    muteRemoteParticipant,
+    unMuteRemoteParticipant
 } from '../base/participants';
 
 import { RemoteVideoMenu } from './components';
@@ -78,5 +79,12 @@ export function muteAllParticipants(exclude: Array<string>) {
             .map(id => id === localId ? muteLocal(true) : muteRemote(id))
             .map(dispatch);
         /* eslint-enable no-confusing-arrow */
+    };
+}
+
+export function unMuteRemote(participantId: string) {
+    return (dispatch: Dispatch<any>) => {
+        sendAnalytics(createRemoteMuteConfirmedEvent(participantId));
+        dispatch(unMuteRemoteParticipant(participantId));
     };
 }

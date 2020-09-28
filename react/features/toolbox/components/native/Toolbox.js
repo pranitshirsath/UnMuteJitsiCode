@@ -9,11 +9,12 @@ import { connect } from '../../../base/redux';
 import { StyleType } from '../../../base/styles';
 import { ChatButton } from '../../../chat';
 import { isToolboxVisible } from '../../functions';
-import AudioMuteButton from '../AudioMuteButton';
+import AudioMuteButtonNative from '../AudioMuteButtonNative';
 import HangupButton from '../HangupButton';
 import VideoMuteButton from '../VideoMuteButton';
 
 import OverflowMenuButton from './OverflowMenuButton';
+import RaiseHandButton from './RaiseHandButton';
 import styles from './styles';
 
 /**
@@ -104,20 +105,19 @@ class Toolbox extends PureComponent<Props> {
                 accessibilityRole = 'toolbar'
                 pointerEvents = 'box-none'
                 style = { styles.toolbar }>
-                <ChatButton
-                    styles = { buttonStylesBorderless }
-                    toggledStyles = { this._getChatButtonToggledStyle(toggledButtonStyles) } />
-                <AudioMuteButton
+            
+                <AudioMuteButtonNative
                     styles = { buttonStyles }
                     toggledStyles = { toggledButtonStyles } />
-                <HangupButton
-                    styles = { hangupButtonStyles } />
+              <RaiseHandButton
+              styles = { buttonStyles }
+              toggledStyles = { toggledButtonStyles }
+              />
                 <VideoMuteButton
                     styles = { buttonStyles }
                     toggledStyles = { toggledButtonStyles } />
-                <OverflowMenuButton
-                    styles = { buttonStylesBorderless }
-                    toggledStyles = { toggledButtonStyles } />
+      <HangupButton
+                    styles = { hangupButtonStyles } />
             </View>
         );
     }

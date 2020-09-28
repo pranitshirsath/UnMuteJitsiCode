@@ -8,6 +8,7 @@ import {
     GRANT_MODERATOR,
     KICK_PARTICIPANT,
     MUTE_REMOTE_PARTICIPANT,
+    UNMUTE_REMOTE_PARTICIPANT,
     PARTICIPANT_ID_CHANGED,
     PARTICIPANT_JOINED,
     PARTICIPANT_KICKED,
@@ -197,6 +198,13 @@ export function localParticipantRoleChanged(role) {
 export function muteRemoteParticipant(id) {
     return {
         type: MUTE_REMOTE_PARTICIPANT,
+        id
+    };
+}
+
+export function unMuteRemoteParticipant(id) {
+    return {
+        type: UNMUTE_REMOTE_PARTICIPANT,
         id
     };
 }
