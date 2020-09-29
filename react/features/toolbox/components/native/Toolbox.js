@@ -101,22 +101,22 @@ class Toolbox extends PureComponent<Props> {
         const { buttonStyles, buttonStylesBorderless, hangupButtonStyles, toggledButtonStyles } = _styles;
 
         return (
-            <View
+           <View
                 accessibilityRole = 'toolbar'
                 pointerEvents = 'box-none'
                 style = { styles.toolbar }>
             
-                <AudioMuteButtonNative
+          <AudioMuteButtonNative
                     styles = { buttonStyles }
                     toggledStyles = { toggledButtonStyles } />
-              <RaiseHandButton
+          <RaiseHandButton
               styles = { buttonStyles }
               toggledStyles = { toggledButtonStyles }
               />
-                <VideoMuteButton
+            <VideoMuteButton
                     styles = { buttonStyles }
                     toggledStyles = { toggledButtonStyles } />
-      <HangupButton
+             <HangupButton
                     styles = { hangupButtonStyles } />
             </View>
         );

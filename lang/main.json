@@ -300,8 +300,8 @@
         "transcribing": "Transcribing",
         "unlockRoom": "Remove meeting $t(lockRoomPassword)",
         "userPassword": "user password",
-        "WaitForHostMsg": "The conference <b>{{room}}</b> has not yet started. If you are the host then please authenticate. Otherwise, please wait for the host to arrive.",
-        "WaitForHostMsgWOk": "The conference <b>{{room}}</b> has not yet started. If you are the host then please press Ok to authenticate. Otherwise, please wait for the host to arrive.",
+        "WaitForHostMsg": "The class <b>{{room}}</b> has not yet started. Please wait for the Teacher to arrive.",
+        "WaitForHostMsgWOk": "The class <b>{{room}}</b> has not yet started. Please wait for the Teacher to arrive.",
         "WaitingForHost": "Waiting for the host ...",
         "Yes": "Yes",
         "yourEntireScreen": "Your entire screen"
